@@ -1,0 +1,28 @@
+name: 'Webship Starter'
+description: 'The Webship site template: the Website Starter with documentation, products and releases, a newsletter and social sharing. Built with the UI Suite UIkit theme (UIkit and HTMX) on top of Drupal and Display Builder.'
+type: 'Site'
+# Site template metadata for the Webship and Drupal CMS installers.
+extra:
+  drupal_cms_installer:
+    creator: 'Webship'
+recipes:
+  # The Website Starter site template, in the same recipes directory.
+  - website_starter
+  # The Webship features of Webship 11.0.x. The administration of Web Admin is
+  # provided by the Drupal CMS admin UI recipe of the Website Starter: the
+  # Dashboards module of Web Admin conflicts with its Dashboard module.
+  - modules/contrib/webdoc/recipes/default
+  - modules/contrib/webreleases/recipes/default
+  - modules/contrib/webnewsletter/recipes/default
+install:
+  - node
+  - webshare
+config:
+  strict: false
+  actions:
+    system.site:
+      simpleConfigUpdate:
+        slogan: 'Ship websites in a swift way'
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true

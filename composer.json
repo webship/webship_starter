@@ -1,0 +1,15 @@
+{
+    "name": "drupal/webship_starter",
+    "type": "drupal-recipe",
+    "description": "The Webship site template: the Website Starter with documentation, products and releases, a newsletter and social sharing. Built with the UI Suite UIkit theme (UIkit and HTMX) on top of Drupal and Display Builder.",
+    "homepage": "https://www.drupal.org/project/webship_starter",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": "^11.4 || ^12",
+        "drupal/webdoc": "~12.0@dev",
+        "drupal/webnewsletter": "~12.0@dev",
+        "drupal/webreleases": "~12.0@dev",
+        "drupal/website_starter": "^1.0@dev",
+        "drupal/webshare": "~12.0@dev"
+    }
+}
