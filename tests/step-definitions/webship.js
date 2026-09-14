@@ -16,7 +16,7 @@ const playwrightConfig = require(require('path').join(process.cwd(), 'playwright
  * deliberately wait past the Honeypot time limit before submitting, exactly
  * as a real human visitor naturally would. Do NOT remove this wait to "speed
  * up" the suite and do NOT disable the Honeypot login protection to work
- * around it — the protection is intended distribution behaviour.
+ * around it — the protection is intended distribution behavior.
  */
 const HONEYPOT_LOGIN_TIME_LIMIT_MS = 3000;
 
@@ -27,7 +27,7 @@ const HONEYPOT_LOGIN_TIME_LIMIT_MS = 3000;
 async function loginWith(page, launchUrl, name, password) {
   await page.goto(`${launchUrl}/user/login`);
 
-  // Drupal's default login form authenticates by username, not e-mail.
+  // Drupal's default login form authenticates by username, not email.
   await page.fill('#edit-name', name);
   await page.fill('#edit-pass', password);
 

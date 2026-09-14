@@ -36,7 +36,7 @@ default:
       value: |-
         <p>Welcome to the Webship documentation. Webship helps web developers ship websites in a swift way: a Drupal site template built with recipes, Display Builder and the UI Suite UIkit design system.</p>
         <h2>Getting started</h2>
-        <p>Create a new project with Composer and DDEV, then install the site from the browser or with Drush. The installer applies the Website Starter site template and the Webship features for you: pages, a blog, documentation, products and releases, a newsletter and social sharing.</p>
+        <p>Create a new project with Composer and DDEV, then install the site from the browser or with Drush. The installer applies the Webship Starter site template for you: pages, documentation, products and releases, a newsletter and social sharing.</p>
         <h2>Building pages</h2>
         <p>Every content type is displayed with Display Builder. Open <em>Structure &gt; Content types &gt; Manage display</em> to arrange fields as UIkit components, and <em>Structure &gt; Page layout</em> to change the header, navigation and footer of the whole site.</p>
         <h2>Writing documentation</h2>

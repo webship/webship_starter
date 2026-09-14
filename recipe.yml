@@ -1,28 +1,97 @@
 name: 'Webship Starter'
-description: 'The Webship site template: the Website Starter with documentation, products and releases, a newsletter and social sharing. Built with the UI Suite UIkit theme (UIkit and HTMX) on top of Drupal and Display Builder.'
+description: 'The Webship site template: a site to manage software, with documentation, products and releases, a newsletter and social sharing. Built with the UI Suite UIkit theme (UIkit and HTMX) on top of Drupal and Display Builder. No Canvas, no Layout Builder.'
 type: 'Site'
-# Site template metadata for the Webship and Drupal CMS installers.
+# Site template metadata for the Webship installer.
 extra:
   drupal_cms_installer:
     creator: 'Webship'
+# A site template works on its own: it applies the default recipes of the
+# Webship modules, Web Dashboard and core recipes, never another site template.
 recipes:
-  # The Website Starter site template, in the same recipes directory.
-  - website_starter
-  # The Webship features of Webship 11.0.x. The administration of Web Admin is
-  # provided by the Drupal CMS admin UI recipe of the Website Starter: the
-  # Dashboards module of Web Admin conflicts with its Dashboard module.
+  # Webship content types and media, before the roles: the roles reference
+  # their permissions. Webpage first: it installs Node.
+  - modules/contrib/webpage/recipes/default
+  - modules/contrib/webassets/recipes/default
+  - modules/contrib/webdev/recipes/default
+  - core/recipes/tags_taxonomy
+  # The core recipes of the text formats, the themes, the roles and the
+  # recommended settings.
+  - core/recipes/basic_block_type
+  - core/recipes/basic_html_format_editor
+  - core/recipes/full_html_format_editor
+  - core/recipes/core_recommended_performance
+  - core/recipes/core_recommended_maintenance
+  - core/recipes/core_recommended_admin_theme
+  - core/recipes/core_recommended_front_end_theme
+  - core/recipes/user_picture
+  - core/recipes/restricted_html_format
+  - core/recipes/administrator_role
+  - core/recipes/content_editor_role
+  # The Webship administration, SEO and security features. Web Admin comes
+  # after the core admin theme recipe: it sets Gin as the admin theme.
+  - modules/contrib/webadmin/recipes/default
+  - modules/contrib/webseo/recipes/default
+  - modules/contrib/websecurity/recipes/default
+  # The default dashboards of the Webship site templates, built with Display
+  # Builder: Webmaster for site administrators, Editorial for content editors.
+  - webdash
+  # Webship features: editor and configuration management.
+  - modules/contrib/webeditor/recipes/default
+  - modules/contrib/webconfig/recipes/default
+  # The Webship features: documentation, products and releases, a newsletter.
   - modules/contrib/webdoc/recipes/default
   - modules/contrib/webreleases/recipes/default
   - modules/contrib/webnewsletter/recipes/default
 install:
-  - node
+  # Social sharing.
   - webshare
+  # Theme.
+  - ui_suite_uikit
 config:
   strict: false
+  import:
+    olivero:
+      - block.block.olivero_help
   actions:
+    system.theme:
+      simpleConfigUpdate:
+        default: ui_suite_uikit
     system.site:
       simpleConfigUpdate:
         slogan: 'Ship websites in a swift way'
-    node.settings:
+        page.front: /node
+    user.role.anonymous:
+      grantPermission: 'access content'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access content'
+        - 'delete own files'
+        - 'access administration pages'
+    # Content editors manage the content of every content type of the site.
+    user.role.content_editor:
+      grantPermissions:
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access files overview'
+        - 'administer url aliases'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'edit terms in tags'
+        - 'delete own files'
+        - 'revert all revisions'
+        - 'view all revisions'
+        - 'view the administration theme'
+      grantPermissionsForEachNodeType:
+        - 'create %bundle content'
+        - 'delete %bundle revisions'
+        - 'delete own %bundle content'
+        - 'edit own %bundle content'
+    # Anti-spam protection on the contact webform of the site.
+    webform.webform.contact:
       simpleConfigUpdate:
-        use_admin_theme: true
+        third_party_settings:
+          antibot:
+            antibot: true
+          honeypot:
+            honeypot: true
+            time_restriction: true
