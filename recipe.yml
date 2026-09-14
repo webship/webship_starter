@@ -87,6 +87,19 @@ config:
         - 'delete %bundle revisions'
         - 'delete own %bundle content'
         - 'edit own %bundle content'
+    # Tokens in the content, like the year in the footer copyright block
+    # ([date:custom:Y]).
+    filter.format.full_html:
+      setFilterConfigs:
+        -
+          instance_id: token_filter
+          configuration:
+            id: token_filter
+            provider: token_filter
+            status: true
+            weight: 110
+            settings:
+              replace_empty: false
     # Anti-spam protection on the contact webform of the site.
     webform.webform.contact:
       simpleConfigUpdate:

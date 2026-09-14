@@ -192,7 +192,7 @@ sources:
                           set_active_trail: false
                           expand_all_items: false
                     slots: {  }
-  # Main content.
+  # Main content, in the main landmark of the page.
   - source_id: component
     source:
       component:
@@ -207,6 +207,10 @@ sources:
             source_id: select
             source:
               value: default
+          attributes:
+            source_id: attributes
+            source:
+              value: 'role="main"'
         slots:
           content:
             sources:
@@ -312,6 +316,13 @@ sources:
                                     source:
                                       value: 'class="uk-float-right"'
                                 slots: {  }
+                          - source_id: block
+                            source:
+                              plugin_id: 'block_content:7dcbd77f-7ab3-412e-9a50-e824b552116d'
+                              'block_content:7dcbd77f-7ab3-412e-9a50-e824b552116d':
+                                status: true
+                                info: ''
+                                view_mode: full
                           - source_id: block
                             source:
                               plugin_id: system_powered_by_block
