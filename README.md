@@ -34,9 +34,12 @@ Or open the site with `ddev launch` and pick Webship Starter in the installer.
 On an installed site, apply it as a recipe:
 
 ```shell
+ddev composer config minimum-stability dev
 ddev composer require drupal/webship_starter:^1.0@alpha
 ddev drush recipe ../recipes/webship_starter
 ```
+
+The first line is needed while the packages are alpha releases.
 
 ## What you get
 
