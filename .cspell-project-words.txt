@@ -5,6 +5,7 @@ natshah
 tagify
 totop
 webadmin
+webai
 webassets
 webblog
 webconfig
