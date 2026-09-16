@@ -16,25 +16,26 @@ recipe and core recipes, never another site template.
 
 ## Install
 
-With the [Website](https://www.drupal.org/project/website) project template and DDEV:
+Composer runs inside DDEV, so nothing is needed on your machine but DDEV itself. Start from the
+[Website](https://www.drupal.org/project/website) project template, which ships this site template:
 
 ```shell
-composer create-project drupal/website my_site
-cd my_site
-ddev config --project-type=drupal --docroot=web
+mkdir -p ~/workspace/projects/my-webship-site
+cd ~/workspace/projects/my-webship-site
+ddev config --project-type=drupal11 --docroot=web --php-version=8.4
 ddev start
-ddev composer require drupal/webship_starter
-ddev drush site:install recipes/webship_starter -y
+ddev composer create-project drupal/website:^1.0@alpha
+ddev drush si -y webship --account-name=webmaster --site-name="My Webship Site" installer_site_template_form.add_ons=webship_starter
 ddev launch
 ```
 
-The [Webship](https://www.drupal.org/project/webship) installer lists the site templates: choose Webship Starter.
+Or open the site with `ddev launch` and pick Webship Starter in the installer.
 
 On an installed site, apply it as a recipe:
 
 ```shell
-ddev composer require drupal/webship_starter
-ddev drush recipe recipes/webship_starter
+ddev composer require drupal/webship_starter:^1.0@alpha
+ddev drush recipe ../recipes/webship_starter
 ```
 
 ## What you get
