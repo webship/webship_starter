@@ -4,6 +4,13 @@
     "description": "The Webship site template: a site to manage software, with documentation, products and releases, a newsletter and social sharing. Built with the UI Suite UIkit theme (UIkit and HTMX) on top of Drupal and Display Builder. No Canvas, no Layout Builder.",
     "homepage": "https://www.drupal.org/project/webship_starter",
     "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Webship",
+            "homepage": "https://webship.co",
+            "role": "Maintainer"
+        }
+    ],
     "keywords": ["Drupal", "recipe", "Display Builder", "UI Suite", "UIkit", "starter", "Webship"],
     "require": {
         "drupal/core": "^11.4 || ^12",
