@@ -25,7 +25,7 @@ cd ~/workspace/projects/my-webship-site
 ddev config --project-type=drupal11 --docroot=web --php-version=8.4
 ddev start
 ddev composer create-project drupal/website:^1.0@alpha
-ddev drush si -y webship --account-name=webmaster --site-name="My Webship Site" installer_site_template_form.add_ons=webship_starter
+ddev drush site:install ../recipes/webship_starter -y --account-name=webmaster --site-name="My Webship Site"
 ddev launch
 ```
 
