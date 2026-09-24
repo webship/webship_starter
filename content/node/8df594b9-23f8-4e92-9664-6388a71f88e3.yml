@@ -6,42 +6,26 @@ _meta:
   default_langcode: en
 default:
   revision_uid:
-    -
-      target_id: 1
+  - target_id: 1
   status:
-    -
-      value: true
+  - value: true
   uid:
-    -
-      target_id: 1
+  - target_id: 1
   title:
-    -
-      value: 'Manage your software'
+  - value: Manage your software
   promote:
-    -
-      value: false
+  - value: false
   sticky:
-    -
-      value: false
+  - value: false
   moderation_state:
-    -
-      value: published
+  - value: published
   revision_translation_affected:
-    -
-      value: true
+  - value: true
   path:
-    -
-      alias: /home
-      langcode: en
-      pathauto: 0
+  - alias: /home
+    langcode: en
+    pathauto: 0
   body:
-    -
-      value: |-
-        <p class="uk-text-lead">Publish your products and their releases, write the documentation, and keep your users up to date, from one site.</p>
-        <div class="uk-child-width-1-3@m uk-grid-match uk-margin-medium-top" uk-grid>
-        <div><div class="uk-card uk-card-default uk-card-body"><h3 class="uk-card-title">Documentation</h3><p>Guides and reference pages, organized as a book that grows with your software.</p><p><a class="uk-button uk-button-text" href="/docs">Read the docs</a></p></div></div>
-        <div><div class="uk-card uk-card-default uk-card-body"><h3 class="uk-card-title">Products and releases</h3><p>List every product with its releases, release notes and download links.</p><p><a class="uk-button uk-button-text" href="/products">See the products</a></p></div></div>
-        <div><div class="uk-card uk-card-default uk-card-body"><h3 class="uk-card-title">Contact</h3><p>Questions about a product or a release? Send us a message.</p><p><a class="uk-button uk-button-text" href="/form/contact">Contact us</a></p></div></div>
-        </div>
-      format: full_html
-      summary: ''
+  - value: ''
+    format: full_html
+    summary: ''
