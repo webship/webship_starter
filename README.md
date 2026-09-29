@@ -58,6 +58,29 @@ ddev drush recipe ../recipes/webship_starter
 - **Design system**: the UI Suite UIkit theme with its UI Styles utilities, UI Skins design tokens (light and
   dark color modes) and UI Icons pack.
 
+## Page layouts and the administration theme
+
+The page layouts are built for UI Suite UIkit, the front theme, and stay out of the pages UIkit Admin renders:
+
+- The Home layout adds the *Current theme* condition
+  (`current_theme: ui_suite_uikit`) to the path they target.
+- The default layout keeps no condition: Display Builder takes a page layout without conditions for the
+  default one. [Web Admin](https://www.drupal.org/project/webadmin) keeps it out of the pages another theme
+  renders, like the log in, password reset and registration screens it shows in UIkit Admin.
+
+A site installed from an earlier release gets the default layout fixed by updating Web Admin. The
+conditional layouts get the condition with:
+
+```shell
+ddev drush php:eval '
+foreach (\Drupal::entityTypeManager()->getStorage("page_layout")->loadMultiple() as $layout) {
+  if (!$layout->isDefault() && !$layout->getConditions()->has("current_theme")) {
+    $layout->getConditions()->addInstanceId("current_theme", ["id" => "current_theme", "negate" => FALSE, "theme" => "ui_suite_uikit"]);
+    $layout->save();
+  }
+}'
+```
+
 ## Requirements
 
 - Drupal 11.4 or later.
