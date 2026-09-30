@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3560b57e-bd97-4988-b2af-99fbdf15c683
+  bundle: release
+  default_langcode: en
+  depends:
+    9953fdb1-50ac-4500-9559-af9ac62e549e: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: '1.1.0'
+  created:
+    -
+      value: 1788220800
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /products/marigold/releases/1.1.0
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p>Checklists on cards, and a faster board.</p>
+        <h2>Added</h2>
+        <ul class="uk-list uk-list-bullet">
+          <li>Checklists on cards, with a progress count on the board.</li>
+          <li>Due dates show in red once they have passed.</li>
+        </ul>
+        <h2>Fixed</h2>
+        <ul class="uk-list uk-list-bullet">
+          <li>Large boards open twice as fast.</li>
+          <li>Dragging a card to an empty column works again.</li>
+        </ul>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
+      format: full_html
+      summary: 'Checklists on cards, and a faster board.'
+  field_product:
+    -
+      entity: 9953fdb1-50ac-4500-9559-af9ac62e549e

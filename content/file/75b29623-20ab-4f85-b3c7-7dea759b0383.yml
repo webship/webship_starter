@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 75b29623-20ab-4f85-b3c7-7dea759b0383
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: make-it-yours-light.jpg
+  uri:
+    -
+      value: 'public://webship-starter/make-it-yours-light.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 85519
+  status:
+    -
+      value: true

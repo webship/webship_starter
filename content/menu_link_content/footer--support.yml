@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 5e03b561-08f5-41cf-9838-75fba4222d8a
+  uuid: 806b63ce-894c-41de-8a29-2343009492bf
   bundle: menu_link_content
   default_langcode: en
 default:
@@ -10,13 +10,13 @@ default:
       value: true
   title:
     -
-      value: Contact
+      value: Support
   menu_name:
     -
       value: footer
   link:
     -
-      uri: 'internal:/form/contact'
+      uri: 'internal:/support'
       title: ''
       options: {  }
   external:
@@ -27,7 +27,7 @@ default:
       value: false
   weight:
     -
-      value: 3
+      value: 2
   expanded:
     -
       value: false

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c814552a-63d6-401c-b68f-ea6d463ef52c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: code-on-monitor.jpg
+  uri:
+    -
+      value: 'public://webship-starter/code-on-monitor.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 380726
+  status:
+    -
+      value: true

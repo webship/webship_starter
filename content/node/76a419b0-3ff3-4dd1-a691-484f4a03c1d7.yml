@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 76a419b0-3ff3-4dd1-a691-484f4a03c1d7
+  bundle: release
+  default_langcode: en
+  depends:
+    9953fdb1-50ac-4500-9559-af9ac62e549e: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: '1.0.0'
+  created:
+    -
+      value: 1780272000
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /products/marigold/releases/1.0.0
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p>The first release of Marigold.</p>
+        <h2>Added</h2>
+        <ul class="uk-list uk-list-bullet">
+          <li>Boards, columns and cards.</li>
+          <li>Card owners and due dates.</li>
+          <li>Sign in with an email address.</li>
+        </ul>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
+      format: full_html
+      summary: 'The first release of Marigold.'
+  field_product:
+    -
+      entity: 9953fdb1-50ac-4500-9559-af9ac62e549e

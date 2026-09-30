@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6225c20d-2cd8-410b-b120-258d57706e0d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: make-it-yours-dark.jpg
+  uri:
+    -
+      value: 'public://webship-starter/make-it-yours-dark.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 82607
+  status:
+    -
+      value: true

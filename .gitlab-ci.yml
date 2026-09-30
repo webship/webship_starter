@@ -66,5 +66,17 @@ recipe:
     - test "$($DRUSH config:get webform.webform.newsletter_subscribe id --format=string)" = "newsletter_subscribe"
     - $DRUSH pm:list --status=enabled --format=list | grep -qx webshare
     - $DRUSH pm:list --status=enabled --format=list | grep -qx webdashboard
-    # The Documentation page of the template is imported.
-    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "webdoc")->count()->execute();')" -gt 0
+    # The default content is imported: the Home, Make it yours and Support
+    # pages, the Documentation page and its three guides, the Marigold example
+    # product with two releases, and the images.
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "webpage")->count()->execute();')" -eq 3
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "webdoc")->count()->execute();')" -eq 4
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "product")->count()->execute();')" -eq 1
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "release")->count()->execute();')" -eq 2
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("media")->accessCheck(FALSE)->condition("bundle", "image")->count()->execute();')" -eq 4
+    - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/make-it-yours");')" != "/make-it-yours"
+    - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/support");')" != "/support"
+    - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/docs/your-first-board");')" != "/docs/your-first-board"
+    - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/products/marigold/releases/1.1.0");')" != "/products/marigold/releases/1.1.0"
+    # The look: the Clear ink colors of UI Skins, with a dark mode value.
+    - test "$($DRUSH config:get ui_suite_uikit.settings third_party_settings.ui_skins.css_variables.ui-suite-uikit-global-primary-background --format=json | grep -c 2448c4)" -eq 1

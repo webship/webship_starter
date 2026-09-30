@@ -34,14 +34,32 @@ default:
   body:
     -
       value: |-
-        <p>Welcome to the Webship documentation. Webship helps web developers ship websites in a swift way: a Drupal site template built with recipes, Display Builder and the UI Suite UIkit design system.</p>
-        <h2>Getting started</h2>
-        <p>Create a new project with Composer and DDEV, then install the site from the browser or with Drush. The installer applies the Webship Starter site template for you: pages, documentation, products and releases, a newsletter and social sharing.</p>
-        <h2>Building pages</h2>
-        <p>Every content type is displayed with Display Builder. Open <em>Structure &gt; Content types &gt; Manage display</em> to arrange fields as UIkit components, and <em>Structure &gt; Page layout</em> to change the header, navigation and footer of the whole site.</p>
-        <h2>Writing documentation</h2>
-        <p>Documentation pages are book pages. Add a child page from the book navigation to grow a guide, and reorder the pages from the book outline.</p>
-        <h2>Theming</h2>
-        <p>The UI Suite UIkit theme ships single directory components, UI Styles utilities and UI Skins color modes. Change the colors and the light or dark mode from the theme settings, without writing CSS.</p>
+        <p class="uk-text-lead">Everything you need to run Marigold, the example product of this site. Start with the first guide, then pick what you need.</p>
+        <h2>Guides</h2>
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+          <div>
+            <a class="uk-card uk-card-default uk-card-hover uk-card-body uk-display-block uk-link-toggle" href="/docs/getting-started">
+              <span class="uk-text-primary" uk-icon="icon: play-circle; ratio: 1.5"></span>
+              <h3 class="uk-card-title uk-link-heading">Getting started</h3>
+              <p>Install Marigold and sign in for the first time.</p>
+            </a>
+          </div>
+          <div>
+            <a class="uk-card uk-card-default uk-card-hover uk-card-body uk-display-block uk-link-toggle" href="/docs/your-first-board">
+              <span class="uk-text-primary" uk-icon="icon: grid; ratio: 1.5"></span>
+              <h3 class="uk-card-title uk-link-heading">Your first board</h3>
+              <p>Create a board, add cards and invite your team.</p>
+            </a>
+          </div>
+          <div>
+            <a class="uk-card uk-card-default uk-card-hover uk-card-body uk-display-block uk-link-toggle" href="/docs/questions-and-answers">
+              <span class="uk-text-primary" uk-icon="icon: question; ratio: 1.5"></span>
+              <h3 class="uk-card-title uk-link-heading">Questions and answers</h3>
+              <p>Limits, shortcuts and the answers to common questions.</p>
+            </a>
+          </div>
+        </div>
+        <p class="uk-margin-large-top">Can't find what you need? Visit <a href="/support">Support</a>.</p>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: ''
+      summary: 'Guides for Marigold, the example product of this site.'

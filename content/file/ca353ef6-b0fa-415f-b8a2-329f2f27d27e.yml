@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ca353ef6-b0fa-415f-b8a2-329f2f27d27e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: code-editor-laptop.jpg
+  uri:
+    -
+      value: 'public://webship-starter/code-editor-laptop.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 208809
+  status:
+    -
+      value: true

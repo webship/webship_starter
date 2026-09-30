@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1c410677-21ac-464d-82c8-dc24da0ae356
+  bundle: webdoc
+  default_langcode: en
+  depends:
+    ca353ef6-b0fa-415f-b8a2-329f2f27d27e: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Getting started'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /docs/getting-started
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">Install Marigold and sign in. It takes about five minutes.</p>
+        <h2>What you need</h2>
+        <ul class="uk-list uk-list-bullet">
+          <li>A computer with Docker.</li>
+          <li>A free port, 8080 by default.</li>
+        </ul>
+        <h2>Install</h2>
+        <ol>
+          <li>Download and start Marigold:
+            <pre><code>docker run -d --name marigold -p 8080:8080 example/marigold:1.1.0</code></pre>
+          </li>
+          <li>Open <code>http://localhost:8080</code> in your browser.</li>
+          <li>Create the first account. It becomes the owner of the workspace.</li>
+          <li>Sign in, and you are ready for <a href="/docs/your-first-board">your first board</a>.</li>
+        </ol>
+        <img src="/sites/default/files/webship-starter/code-editor-laptop.jpg" data-entity-type="file" data-entity-uuid="ca353ef6-b0fa-415f-b8a2-329f2f27d27e" width="1800" height="1195" alt="A code editor on a laptop screen." class="uk-border-rounded uk-box-shadow-small" loading="lazy">
+        <div class="uk-margin-large-top uk-flex uk-flex-between">
+          <a href="/docs"><span uk-icon="icon: arrow-left"></span> Documentation</a>
+          <a href="/docs/your-first-board">Your first board <span uk-icon="icon: arrow-right"></span></a>
+        </div>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
+      format: full_html
+      summary: 'Install Marigold and sign in.'

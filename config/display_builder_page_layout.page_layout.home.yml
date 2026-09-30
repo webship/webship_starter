@@ -194,20 +194,21 @@ sources:
                       set_active_trail: false
                       expand_all_items: false
                 slots: {}
+# The main content: the sections of the front page, in order.
 - source_id: component
   source:
     component:
       component_id: ui_suite_uikit:section
       variant_id: null
       props:
-        size:
-          source_id: select
-          source:
-            value: small
         container:
           source_id: select
           source:
-            value: default
+            value: none
+        padding_remove:
+          source_id: select
+          source:
+            value: vertical
         landmark:
           source_id: select
           source:
@@ -215,36 +216,327 @@ sources:
       slots:
         content:
           sources:
-          - source_id: block
-            source:
-              plugin_id: system_messages_block
-              system_messages_block: {}
-          - source_id: block
-            source:
-              plugin_id: system_breadcrumb_block
-              system_breadcrumb_block: {}
-          - source_id: page_title
-            source: {}
-          - source_id: textarea
-            source:
-              value: <p class="uk-text-lead">Publish your products and their releases, write the documentation, and keep your users up to date, from one site.</p>
+          # 1. Hero: headline, one sentence, two buttons, a photo.
           - source_id: component
             source:
               component:
-                component_id: ui_suite_uikit:grid_3_columns
+                component_id: ui_suite_uikit:section
                 variant_id: null
                 props:
-                  gutter:
+                  size:
                     source_id: select
                     source:
-                      value: medium
-                  match:
-                    source_id: checkbox
+                      value: large
+                  container:
+                    source_id: select
                     source:
-                      value: true
+                      value: default
                 slots:
-                  column_1:
+                  content:
                     sources:
+                    - source_id: block
+                      source:
+                        plugin_id: system_messages_block
+                        system_messages_block: {}
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:grid_2_columns
+                          variant_id: null
+                          props:
+                            gap:
+                              source_id: select
+                              source:
+                                value: large
+                            vertical_align:
+                              source_id: select
+                              source:
+                                value: middle
+                          slots:
+                            column_1:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:heading
+                                    variant_id: null
+                                    props:
+                                      heading_level:
+                                        source_id: select
+                                        source:
+                                          value: 1
+                                      size:
+                                        source_id: select
+                                        source:
+                                          value: medium
+                                    slots:
+                                      title:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: One site for your software.
+                              - source_id: textarea
+                                source:
+                                  value: '<p class="uk-text-lead">Publish your products and releases, write the docs and answer your users, from one site you can restyle in a few clicks.</p>'
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: primary
+                                    props:
+                                      url:
+                                        source_id: url
+                                        source:
+                                          value: /make-it-yours
+                                      attributes:
+                                        source_id: attributes
+                                        source:
+                                          value: class="uk-margin-small-right uk-margin-small-bottom"
+                                    slots:
+                                      label:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: Make it yours
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: default
+                                    props:
+                                      url:
+                                        source_id: url
+                                        source:
+                                          value: /products/marigold
+                                      attributes:
+                                        source_id: attributes
+                                        source:
+                                          value: class="uk-margin-small-bottom"
+                                    slots:
+                                      label:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: See the example product
+                            column_2:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<img src="/sites/default/files/webship-starter/developer-laptop-code.jpg" width="1800" height="1200" alt="A developer writing code on a laptop." class="uk-border-rounded uk-box-shadow-medium">'
+          # 2. Three desks: products and releases, documentation, contact.
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:section
+                variant_id: null
+                props:
+                  padding_remove:
+                    source_id: select
+                    source:
+                      value: top
+                  container:
+                    source_id: select
+                    source:
+                      value: default
+                slots:
+                  content:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:heading
+                          variant_id: null
+                          props:
+                            heading_level:
+                              source_id: select
+                              source:
+                                value: 2
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Everything in one place
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:grid_3_columns
+                          variant_id: null
+                          props:
+                            gap:
+                              source_id: select
+                              source:
+                                value: medium
+                            match:
+                              source_id: checkbox
+                              source:
+                                value: true
+                          slots:
+                            column_1:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:card
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: default
+                                    props: {}
+                                    slots:
+                                      title:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:icon
+                                              variant_id: null
+                                              props:
+                                                icon:
+                                                  source_id: icon
+                                                  source:
+                                                    value:
+                                                      target_id: ui_suite_uikit:tag
+                                                      settings:
+                                                        ui_suite_uikit:
+                                                          ratio: 1.5
+                                                          alt: ''
+                                                attributes:
+                                                  source_id: attributes
+                                                  source:
+                                                    value: class="uk-text-primary uk-margin-small-right"
+                                              slots: {}
+                                        - source_id: textfield
+                                          source:
+                                            value: Products and releases
+                                      content:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: '<p>A page for each product, with its releases and short release notes.</p><p><a href="/products">See the products</a></p>'
+                            column_2:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:card
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: default
+                                    props: {}
+                                    slots:
+                                      title:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:icon
+                                              variant_id: null
+                                              props:
+                                                icon:
+                                                  source_id: icon
+                                                  source:
+                                                    value:
+                                                      target_id: ui_suite_uikit:file-text
+                                                      settings:
+                                                        ui_suite_uikit:
+                                                          ratio: 1.5
+                                                          alt: ''
+                                                attributes:
+                                                  source_id: attributes
+                                                  source:
+                                                    value: class="uk-text-primary uk-margin-small-right"
+                                              slots: {}
+                                        - source_id: textfield
+                                          source:
+                                            value: Documentation
+                                      content:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: '<p>Short guides that start with a path: install, first steps, answers.</p><p><a href="/docs">Read the docs</a></p>'
+                            column_3:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:card
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: default
+                                    props: {}
+                                    slots:
+                                      title:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:icon
+                                              variant_id: null
+                                              props:
+                                                icon:
+                                                  source_id: icon
+                                                  source:
+                                                    value:
+                                                      target_id: ui_suite_uikit:comments
+                                                      settings:
+                                                        ui_suite_uikit:
+                                                          ratio: 1.5
+                                                          alt: ''
+                                                attributes:
+                                                  source_id: attributes
+                                                  source:
+                                                    value: class="uk-text-primary uk-margin-small-right"
+                                              slots: {}
+                                        - source_id: textfield
+                                          source:
+                                            value: Contact desk
+                                      content:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: '<p>A help center with a short FAQ, and a contact form that routes every message.</p><p><a href="/support">Get support</a></p>'
+          # 3. The example product, with its latest release.
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:section
+                variant_id:
+                  source_id: select
+                  source:
+                    value: muted
+                props:
+                  container:
+                    source_id: select
+                    source:
+                      value: default
+                slots:
+                  content:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:heading
+                          variant_id: null
+                          props:
+                            heading_level:
+                              source_id: select
+                              source:
+                                value: 2
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: An example product
                     - source_id: component
                       source:
                         component:
@@ -254,157 +546,217 @@ sources:
                             source:
                               value: default
                           props:
-                            hover:
-                              source_id: checkbox
+                            image_position:
+                              source_id: select
                               source:
-                                value: false
+                                value: left
+                          slots:
+                            image:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<img src="/sites/default/files/webship-starter/team-planning-laptops.jpg" width="1800" height="1200" alt="Two people planning a project with laptops and printed notes." loading="lazy">'
+                            badge:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:label
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: success
+                                    props: {}
+                                    slots:
+                                      label:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: Latest 1.1.0
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Marigold
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p>A small open-source task board for teams. It is made up, so the product, docs and support pages have something to talk about. Replace it with your own.</p>'
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: primary
+                                    props:
+                                      url:
+                                        source_id: url
+                                        source:
+                                          value: /products/marigold
+                                      attributes:
+                                        source_id: attributes
+                                        source:
+                                          value: class="uk-margin-small-right uk-margin-small-bottom"
+                                    slots:
+                                      label:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: See Marigold
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: text
+                                    props:
+                                      url:
+                                        source_id: url
+                                        source:
+                                          value: /products/marigold/releases/1.1.0
+                                      attributes:
+                                        source_id: attributes
+                                        source:
+                                          value: class="uk-margin-small-bottom"
+                                    slots:
+                                      label:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: What is new in 1.1.0
+          # 4. Make it yours: three steps and one button, on the brand color.
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:section
+                variant_id:
+                  source_id: select
+                  source:
+                    value: primary
+                props:
+                  container:
+                    source_id: select
+                    source:
+                      value: default
+                slots:
+                  content:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:heading
+                          variant_id: null
+                          props:
+                            heading_level:
+                              source_id: select
+                              source:
+                                value: 2
                           slots:
                             title:
                               sources:
                               - source_id: textfield
                                 source:
-                                  value: Documentation
-                            content:
-                              sources:
-                              - source_id: component
-                                source:
-                                  component:
-                                    component_id: ui_suite_uikit:button_group
-                                    variant_id: null
-                                    props: {}
-                                    slots:
-                                      buttons:
-                                        sources:
-                                        - source_id: component
-                                          source:
-                                            component:
-                                              component_id: ui_suite_uikit:button
-                                              variant_id:
-                                                source_id: select
-                                                source:
-                                                  value: default
-                                              props:
-                                                url:
-                                                  source_id: url
-                                                  source:
-                                                    value: /docs
-                                              slots:
-                                                label:
-                                                  sources:
-                                                  - source_id: textfield
-                                                    source:
-                                                      value: Read the docs
-                              - source_id: textarea
-                                source:
-                                  value: <p>Guides and reference pages, organized as a book that grows with your software.</p>
-                  column_2:
-                    sources:
+                                  value: Make it yours in three steps
                     - source_id: component
                       source:
                         component:
-                          component_id: ui_suite_uikit:card
+                          component_id: ui_suite_uikit:grid_3_columns
+                          variant_id: null
+                          props:
+                            gap:
+                              source_id: select
+                              source:
+                                value: medium
+                          slots:
+                            column_1:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p class="uk-h3 uk-margin-small-bottom">1. Edit the pages</p><p>Change the words and the images of every page from Content.</p>'
+                            column_2:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p class="uk-h3 uk-margin-small-bottom">2. Pick your colors</p><p>Set the colors and the font in the UI Skins settings of the theme.</p>'
+                            column_3:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p class="uk-h3 uk-margin-small-bottom">3. Light or dark</p><p>Switch the color mode of the whole site with one setting.</p>'
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
                           variant_id:
                             source_id: select
                             source:
                               value: default
                           props:
-                            hover:
-                              source_id: checkbox
+                            url:
+                              source_id: url
                               source:
-                                value: false
+                                value: /make-it-yours
+                            attributes:
+                              source_id: attributes
+                              source:
+                                value: class="uk-margin-medium-top"
                           slots:
-                            title:
+                            label:
                               sources:
                               - source_id: textfield
                                 source:
-                                  value: Products and releases
-                            content:
-                              sources:
-                              - source_id: component
-                                source:
-                                  component:
-                                    component_id: ui_suite_uikit:button_group
-                                    variant_id: null
-                                    props: {}
-                                    slots:
-                                      buttons:
-                                        sources:
-                                        - source_id: component
-                                          source:
-                                            component:
-                                              component_id: ui_suite_uikit:button
-                                              variant_id:
-                                                source_id: select
-                                                source:
-                                                  value: default
-                                              props:
-                                                url:
-                                                  source_id: url
-                                                  source:
-                                                    value: /products
-                                              slots:
-                                                label:
-                                                  sources:
-                                                  - source_id: textfield
-                                                    source:
-                                                      value: See the products
-                              - source_id: textarea
-                                source:
-                                  value: <p>List every product with its releases, release notes and download links.</p>
-                  column_3:
+                                  value: Show me how
+          # 5. Newsletter.
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:section
+                variant_id:
+                  source_id: select
+                  source:
+                    value: muted
+                props:
+                  container:
+                    source_id: select
+                    source:
+                      value: small
+                slots:
+                  content:
                     sources:
                     - source_id: component
                       source:
                         component:
-                          component_id: ui_suite_uikit:card
-                          variant_id:
-                            source_id: select
-                            source:
-                              value: default
+                          component_id: ui_suite_uikit:heading
+                          variant_id: null
                           props:
-                            hover:
-                              source_id: checkbox
+                            heading_level:
+                              source_id: select
                               source:
-                                value: false
+                                value: 2
                           slots:
                             title:
                               sources:
                               - source_id: textfield
                                 source:
-                                  value: Contact
-                            content:
-                              sources:
-                              - source_id: component
-                                source:
-                                  component:
-                                    component_id: ui_suite_uikit:button_group
-                                    variant_id: null
-                                    props: {}
-                                    slots:
-                                      buttons:
-                                        sources:
-                                        - source_id: component
-                                          source:
-                                            component:
-                                              component_id: ui_suite_uikit:button
-                                              variant_id:
-                                                source_id: select
-                                                source:
-                                                  value: default
-                                              props:
-                                                url:
-                                                  source_id: url
-                                                  source:
-                                                    value: /form/contact
-                                              slots:
-                                                label:
-                                                  sources:
-                                                  - source_id: textfield
-                                                    source:
-                                                      value: Contact us
-                              - source_id: textarea
-                                source:
-                                  value: <p>Questions about a product or a release? Send us a message.</p>
+                                  value: Stay in the loop
+                    - source_id: textarea
+                      source:
+                        value: '<p>Get an email when a new release is out. No spam, unsubscribe any time.</p>'
+                    - source_id: block
+                      source:
+                        plugin_id: webform_block
+                        webform_block:
+                          label_display: '0'
+                          webform_id: newsletter_subscribe
+                          default_data: ''
+                          redirect: false
+                          lazy: false
+# 6. Footer: menus, social links, back to top and the copyright.
 - source_id: component
   source:
     component:
@@ -422,6 +774,10 @@ sources:
           source_id: select
           source:
             value: default
+        landmark:
+          source_id: select
+          source:
+            value: footer
       slots:
         content:
           sources:
@@ -486,8 +842,8 @@ sources:
                           slots: {}
                     - source_id: block
                       source:
-                        plugin_id: block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11
-                        block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11:
+                        plugin_id: block_content:7dcbd77f-7ab3-412e-9a50-e824b552116d
+                        block_content:7dcbd77f-7ab3-412e-9a50-e824b552116d:
                           status: true
                           info: ''
                           view_mode: full

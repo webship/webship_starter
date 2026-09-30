@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4e4a3763-55c4-4d2e-af7e-aca0e5a4cd92
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: developer-laptop-code.jpg
+  uri:
+    -
+      value: 'public://webship-starter/developer-laptop-code.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 289238
+  status:
+    -
+      value: true

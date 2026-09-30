@@ -1,0 +1,72 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9f744812-fdd5-476e-b14a-3627404ada54
+  bundle: webpage
+  default_langcode: en
+  depends:
+    75b29623-20ab-4f85-b3c7-7dea759b0383: file
+    6225c20d-2cd8-410b-b120-258d57706e0d: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Make it yours'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /make-it-yours
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">Everything on this site is an example. Change the words, add your own products and guides, and pick your colors. No code needed.</p>
+        <h2>Edit the web pages</h2>
+        <p>Open any page and click <em>Edit</em>, or find it under <em>Content</em>. Every page is a Webpage, a Product, a Release or a Documentation page. Change the text, swap the images from the media library and save. Delete what you do not need.</p>
+        <p>The front page is a page layout, built with Display Builder and UIkit components. Change its sections under <em>Structure &gt; Page layouts &gt; Manage your software</em>. The header and the footer of the other pages are in the <em>Default</em> page layout.</p>
+        <h2>Add a product or a guide</h2>
+        <ol>
+          <li>Go to <em>Content &gt; Add content</em>.</li>
+          <li>Pick <em>Product</em> for a new product, then add a <em>Release</em> for each version and link it to the product.</li>
+          <li>Pick <em>Documentation page</em> for a new guide, and link to it from the <a href="/docs">Documentation</a> page.</li>
+        </ol>
+        <h2>Change the look</h2>
+        <p>The theme is UI Suite UIkit, and every part of the look is a setting:</p>
+        <ul class="uk-list uk-list-bullet">
+          <li><strong>Color mode and font</strong>: under <em>Appearance &gt; Settings &gt; UI Suite UIkit</em>. Pick light, dark, or follow the operating system, and the fonts of the operating system or Atkinson Hyperlegible Next.</li>
+          <li><strong>Colors</strong>: under <em>Appearance &gt; CSS variables &gt; UI Suite UIkit</em>, the UI Skins settings. The text, the links, the backgrounds and the buttons, with a second value for the dark mode. A new look is a few clicks and no CSS.</li>
+        </ul>
+        <p>This site uses a calm blue, <code>#2448C4</code>, with near-black headings. Here it is in both color modes.</p>
+        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+          <figure>
+            <img src="/sites/default/files/webship-starter/make-it-yours-light.jpg" data-entity-type="file" data-entity-uuid="75b29623-20ab-4f85-b3c7-7dea759b0383" width="1440" height="900" alt="The front page of this site in the light color mode." class="uk-border-rounded uk-box-shadow-small" loading="lazy">
+            <figcaption class="uk-text-meta">Light mode</figcaption>
+          </figure>
+          <figure>
+            <img src="/sites/default/files/webship-starter/make-it-yours-dark.jpg" data-entity-type="file" data-entity-uuid="6225c20d-2cd8-410b-b120-258d57706e0d" width="1440" height="900" alt="The front page of this site in the dark color mode." class="uk-border-rounded uk-box-shadow-small" loading="lazy">
+            <figcaption class="uk-text-meta">Dark mode</figcaption>
+          </figure>
+        </div>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
+      format: full_html
+      summary: 'Edit the pages, add products and guides, and change the colors and the color mode with UIkit and UI Skins.'

@@ -26,6 +26,6 @@ default:
     langcode: en
     pathauto: 0
   body:
-  - value: ''
+  - value: '<p>One site for your software: products and releases, documentation and a contact desk. The sections of this page are in the Home page layout, under Structure, Page layouts.</p>'
     format: full_html
     summary: ''

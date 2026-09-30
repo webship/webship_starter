@@ -41,10 +41,15 @@ ddev drush recipe ../recipes/webship_starter
 ## What you get
 
 - **Content types**: Webpage, with the media library (images, documents, audio, video) of Web Assets.
+- **Example content** that teaches as you read it: a front page, a *Make it yours* page about editing the pages
+  and changing the look, and a *Support* page with a short FAQ. Everything is about Marigold, a made-up task
+  board, so you can see a product, its docs and its support desk working together, then replace it.
 - **A page layout** built in Display Builder with UIkit components: sticky navbar with logo, main and account
   menus, offcanvas menu on small screens, content section and footer with menus and social links.
-- [Web Doc](https://www.drupal.org/project/webdoc): documentation book pages, with a Documentation page at `/docs`.
-- [Web Releases](https://www.drupal.org/project/webreleases): products and release notes, at `/products`.
+- [Web Doc](https://www.drupal.org/project/webdoc): documentation book pages, with a Documentation page at `/docs`
+  and three guides: getting started, your first board, and questions and answers.
+- [Web Releases](https://www.drupal.org/project/webreleases): products and release notes, at `/products`, with
+  the Marigold example product and two of its releases.
 - [Web Newsletter](https://www.drupal.org/project/webnewsletter): a newsletter subscription webform.
 - [Webshare](https://www.drupal.org/project/webshare): social sharing buttons.
 - **Contact webform** with anti-spam protection, at `/contact`.
@@ -57,6 +62,9 @@ ddev drush recipe ../recipes/webship_starter
 - **Editing and configuration**: the editor and configuration management features of Webship.
 - **Design system**: the UI Suite UIkit theme with its UI Styles utilities, UI Skins design tokens (light and
   dark color modes) and UI Icons pack.
+- **The look**: a calm blue (`#2448C4`), near-black headings and the fonts of the operating system, with a
+  second palette for the dark mode. It is all UI Skins settings of the theme, under *Appearance > CSS variables*,
+  so you can change it without CSS.
 
 ## Page layouts and the administration theme
 
@@ -80,6 +88,20 @@ foreach (\Drupal::entityTypeManager()->getStorage("page_layout")->loadMultiple()
   }
 }'
 ```
+
+## Image credits
+
+The photos in `content/file` are released under CC0 (public domain dedication), and were resized for the web:
+
+| File | Photo | Author | License |
+| --- | --- | --- | --- |
+| `developer-laptop-code.jpg` | [Laptop coding programs](https://commons.wikimedia.org/wiki/File:Laptop_coding_programs_(Unsplash).jpg) | Tirza van Dijk | CC0 |
+| `code-on-monitor.jpg` | [Code on computer monitor](https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg) | Markus Spiske | CC0 |
+| `code-editor-laptop.jpg` | [Code editor on a laptop](https://commons.wikimedia.org/wiki/File:Pexels-luis-gomes-546819.jpg) | Luis Gomes | CC0 |
+| `team-planning-laptops.jpg` | [Planning with laptops](https://commons.wikimedia.org/wiki/File:Helloquence-61189.jpg) | Helloquence | CC0 |
+
+`make-it-yours-light.jpg` and `make-it-yours-dark.jpg` are screenshots of this site template, distributed with
+this project under GPL-2.0-or-later.
 
 ## Requirements
 

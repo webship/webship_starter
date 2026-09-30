@@ -77,6 +77,56 @@ config:
     system.theme:
       simpleConfigUpdate:
         default: ui_suite_uikit
+    # The look of the site: the fonts of the operating system, the light color
+    # mode, and the colors of the "Clear ink" palette as UI Skins CSS
+    # variables. A calm blue for the brand, near-black headings, and a second
+    # palette for the dark mode where the theme gives the variable one.
+    ui_suite_uikit.settings:
+      simpleConfigUpdate:
+        font_family: system
+        color_mode: light
+        third_party_settings:
+          ui_skins:
+            theme: ui_suite_uikit_light
+            css_variables:
+              ui-suite-uikit-global-background:
+                ':root': '#ffffff'
+                ':root[data-theme="dark"]': '#11161f'
+              ui-suite-uikit-global-muted-background:
+                ':root': '#f5f6f8'
+                ':root[data-theme="dark"]': '#1a212c'
+              ui-suite-uikit-global-emphasis-color:
+                ':root': '#111827'
+                ':root[data-theme="dark"]': '#f3f5f8'
+              ui-suite-uikit-global-color:
+                ':root': '#3f4654ff'
+                ':root[data-theme="dark"]': '#c9cfd8ff'
+              ui-suite-uikit-global-muted-color:
+                ':root': '#5f6675ff'
+                ':root[data-theme="dark"]': '#97a0aeff'
+              ui-suite-uikit-global-primary-color:
+                ':root': '#2448c4'
+                ':root[data-theme="dark"]': '#8fa8ff'
+              ui-suite-uikit-global-link-color:
+                ':root': '#2448c4'
+                ':root[data-theme="dark"]': '#8fa8ff'
+              ui-suite-uikit-global-link-hover-color:
+                ':root': '#1b3699'
+                ':root[data-theme="dark"]': '#b8c8ff'
+              ui-suite-uikit-global-primary-background:
+                ':root': '#2448c4'
+              ui-suite-uikit-global-primary-background-hover:
+                ':root': '#1b3699'
+              ui-suite-uikit-global-secondary-background:
+                ':root': '#111827'
+                ':root[data-theme="dark"]': '#070a0f'
+              ui-suite-uikit-global-border:
+                ':root': '#e3e6ebff'
+                ':root[data-theme="dark"]': '#2a3340ff'
+              ui-suite-uikit-global-success-background:
+                ':root': '#11845b'
+              ui-suite-uikit-global-danger-background:
+                ':root': '#c8283d'
     system.site:
       simpleConfigUpdate:
         slogan: 'Ship websites in a swift way'

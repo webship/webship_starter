@@ -1,0 +1,72 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ec13fbc3-b150-4a69-8a59-9f67ea4b6580
+  bundle: webdoc
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Questions and answers'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /docs/questions-and-answers
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">Short answers to the questions people ask most.</p>
+        <h2>Limits</h2>
+        <div class="uk-overflow-auto">
+          <table class="uk-table uk-table-divider uk-table-small">
+            <thead>
+              <tr><th>What</th><th>Limit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Boards per workspace</td><td>No limit</td></tr>
+              <tr><td>Cards per board</td><td>5,000</td></tr>
+              <tr><td>Members per board</td><td>50</td></tr>
+              <tr><td>Checklist items per card</td><td>100</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Keyboard shortcuts</h2>
+        <div class="uk-overflow-auto">
+          <table class="uk-table uk-table-divider uk-table-small">
+            <thead>
+              <tr><th>Key</th><th>Does</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><kbd>n</kbd></td><td>New card in the first column</td></tr>
+              <tr><td><kbd>/</kbd></td><td>Search the board</td></tr>
+              <tr><td><kbd>Esc</kbd></td><td>Close the open card</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>More questions</h2>
+        <p><strong>Can I export a board?</strong> Yes, as a CSV file, from <strong>Board settings &gt; Export</strong>.</p>
+        <p><strong>Where is my data?</strong> On your own server. Marigold sends nothing anywhere else.</p>
+        <p>Not answered here? Go to <a href="/support">Support</a> or <a href="/contact">contact us</a>.</p>
+        <div class="uk-margin-large-top uk-flex uk-flex-between">
+          <a href="/docs/your-first-board"><span uk-icon="icon: arrow-left"></span> Your first board</a>
+          <a href="/docs">Documentation <span uk-icon="icon: arrow-right"></span></a>
+        </div>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
+      format: full_html
+      summary: 'Limits, shortcuts and the answers to common questions.'

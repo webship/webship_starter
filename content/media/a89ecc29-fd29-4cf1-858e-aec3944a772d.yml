@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a89ecc29-fd29-4cf1-858e-aec3944a772d
+  bundle: image
+  default_langcode: en
+  depends:
+    4e4a3763-55c4-4d2e-af7e-aca0e5a4cd92: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'A developer writing code on a laptop'
+  field_media_image:
+    -
+      alt: 'A developer writing code on a laptop.'
+      title: ''
+      width: 1800
+      height: 1200
+      entity: 4e4a3763-55c4-4d2e-af7e-aca0e5a4cd92

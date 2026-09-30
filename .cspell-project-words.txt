@@ -1,8 +1,15 @@
 antibot
+dijk
 drupical
+gomes
+helloquence
+hyperlegible
 infobars
+markus
 natshah
+spiske
 tagify
+tirza
 totop
 webadmin
 webai

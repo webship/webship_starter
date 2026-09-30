@@ -1,0 +1,60 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3d1c54ab-af08-4cdf-b84c-5017ab20f3b3
+  bundle: webdoc
+  default_langcode: en
+  depends:
+    c814552a-63d6-401c-b68f-ea6d463ef52c: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Your first board'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /docs/your-first-board
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">A board holds the work of one team or one project. Let's make one.</p>
+        <h2>Create the board</h2>
+        <ol>
+          <li>Click <strong>New board</strong> and give it a name, like "Website launch".</li>
+          <li>Keep the three columns Marigold suggests: <em>To do</em>, <em>Doing</em>, <em>Done</em>. Rename them later if you like.</li>
+        </ol>
+        <h2>Add cards</h2>
+        <ol>
+          <li>Click <strong>Add a card</strong> under a column and type the task.</li>
+          <li>Open the card to pick an owner, a due date and a checklist.</li>
+          <li>Drag the card to the next column as the work moves.</li>
+        </ol>
+        <div class="uk-alert-primary" uk-alert>
+          <p><strong>Tip:</strong> keep cards small. A card that takes more than a day is two cards.</p>
+        </div>
+        <h2>Invite your team</h2>
+        <p>Open <strong>Board settings &gt; Members</strong> and enter their email addresses. They get an invitation by email.</p>
+        <img src="/sites/default/files/webship-starter/code-on-monitor.jpg" data-entity-type="file" data-entity-uuid="c814552a-63d6-401c-b68f-ea6d463ef52c" width="1800" height="1200" alt="Colorful source code on a computer monitor." class="uk-border-rounded uk-box-shadow-small" loading="lazy">
+        <div class="uk-margin-large-top uk-flex uk-flex-between">
+          <a href="/docs/getting-started"><span uk-icon="icon: arrow-left"></span> Getting started</a>
+          <a href="/docs/questions-and-answers">Questions and answers <span uk-icon="icon: arrow-right"></span></a>
+        </div>
+        <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
+      format: full_html
+      summary: 'Create a board, add cards and invite your team.'
