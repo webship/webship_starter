@@ -37,7 +37,7 @@ default:
       alias: /make-it-yours
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">Everything on this site is an example. Change the words, add your own products and guides, and pick your colors. No code needed.</p>
@@ -69,4 +69,6 @@ default:
         </div>
         <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: 'Edit the pages, add products and guides, and change the colors and the color mode with UIkit and UI Skins.'
+  field_summary:
+    -
+      value: 'Edit the pages, add products and guides, and change the colors and the color mode with UIkit and UI Skins.'

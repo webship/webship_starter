@@ -31,7 +31,7 @@ default:
       alias: /docs
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">Everything you need to run Marigold, the example product of this site. Start with the first guide, then pick what you need.</p>
@@ -62,4 +62,6 @@ default:
         <p class="uk-margin-large-top">Can't find what you need? Visit <a href="/support">Support</a>.</p>
         <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: 'Guides for Marigold, the example product of this site.'
+  field_summary:
+    -
+      value: 'Guides for Marigold, the example product of this site.'

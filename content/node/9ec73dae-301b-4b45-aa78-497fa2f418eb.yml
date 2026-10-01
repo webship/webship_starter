@@ -34,7 +34,7 @@ default:
       alias: /support
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">Need a hand with Marigold? Most answers are one click away.</p>
@@ -92,4 +92,6 @@ default:
         </div>
         <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: 'Read the docs, ask a question or report a problem.'
+  field_summary:
+    -
+      value: 'Read the docs, ask a question or report a problem.'

@@ -33,7 +33,7 @@ default:
       alias: /products/marigold
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">A small open-source task board for teams. Plan the week, move cards, ship.</p>
@@ -52,7 +52,9 @@ default:
         </p>
         <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: 'A small open-source task board for teams. An example product: replace it with your own.'
+  field_summary:
+    -
+      value: 'A small open-source task board for teams. An example product: replace it with your own.'
   field_image:
     -
       entity: 319d826c-ba13-429c-94dc-2d77af76656c

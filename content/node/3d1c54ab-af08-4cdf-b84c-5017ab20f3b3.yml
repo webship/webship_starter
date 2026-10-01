@@ -30,7 +30,7 @@ default:
       alias: /docs/your-first-board
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">A board holds the work of one team or one project. Let's make one.</p>
@@ -57,4 +57,6 @@ default:
         </div>
         <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: 'Create a board, add cards and invite your team.'
+  field_summary:
+    -
+      value: 'Create a board, add cards and invite your team.'

@@ -33,7 +33,7 @@ default:
       alias: /products/marigold/releases/1.0.0
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p>The first release of Marigold.</p>
@@ -45,7 +45,9 @@ default:
         </ul>
         <p class="uk-text-meta uk-margin-large-top">This is example content. Edit it or delete it from Content.</p>
       format: full_html
-      summary: 'The first release of Marigold.'
+  field_summary:
+    -
+      value: 'The first release of Marigold.'
   field_product:
     -
       entity: 9953fdb1-50ac-4500-9559-af9ac62e549e
