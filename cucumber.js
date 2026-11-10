@@ -4,6 +4,7 @@ module.exports = {
     requireModule: ['tsx/cjs'],
     require: [
       'node_modules/webship-js/tests/step-definitions/**/*.js',
+      'node_modules/@webship-js/drupal-core-steps/tests/step-definitions/**/*.js', // @webship-js/drupal-core-steps: login by handle, the testing users, named pages, messages, listings, the editor, the media library, access control, site structure.
       'tests/step-definitions/**/*.js',
     ],
     paths: ['tests/features/**/*.feature'],
@@ -37,17 +38,17 @@ module.exports = {
       // truth for the usernames add-testing-users.sh actually creates.
       users: {
         Admin: {
-          name: "Admin",
+          username: "Admin",
           email: "test.admin@webship.org",
           password: "dD.123123ddd"
         },
         "Authenticated user": {
-          name: "Authenticated user",
+          username: "Authenticated user",
           email: "test.authenticated@webship.org",
           password: "dD.123123ddd"
         },
         "Content editor": {
-          name: "Content editor",
+          username: "Content editor",
           email: "test.content_editor@webship.org",
           password: "dD.123123ddd"
         }

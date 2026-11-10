@@ -43,35 +43,6 @@ async function loginWith(page, launchUrl, name, password) {
 /**
  * Authenticate a user with a password from the world parameters.
  *
- * Example: I am a logged in user with the "Admin" user
- *
- * @Given /^I am a logged in user with (the )*"([^"]*)?" user$/
- */
-Given(
-  /^I am a logged in user with (the )*(username )*"([^"]*)?" user$/,
-  async function (theCase, usernameCase, username) {
-
-    const users = this.parameters.users;
-
-    if (username in users) {
-      const user = users[username];
-
-      if (user.password) {
-        await loginWith(this.page, this.parameters.launchUrl, user.name || username, user.password);
-      } else {
-        return null;
-      }
-
-    } else {
-      console.log(`${username} username does not exist`);
-      return null;
-    }
-  }
-);
-
-/**
- * Authenticate a user with a password from the world parameters.
- *
  * Example: I login with the "Admin" user
  *
  * @When /^I login with (the )*"([^"]*)?" user$/
