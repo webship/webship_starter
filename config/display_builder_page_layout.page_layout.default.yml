@@ -192,7 +192,9 @@ sources:
                           set_active_trail: false
                           expand_all_items: false
                     slots: {  }
-  # Main content, in the main landmark of the page.
+  # Main content, in the main landmark of the page. The landmark property
+  # prints the main element: the theme underlines the links of main and
+  # footer, and a role attribute on a div would not match its rule.
   - source_id: component
     source:
       component:
@@ -207,10 +209,10 @@ sources:
             source_id: select
             source:
               value: default
-          attributes:
-            source_id: attributes
+          landmark:
+            source_id: select
             source:
-              value: 'role="main"'
+              value: main
         slots:
           content:
             sources:
@@ -251,7 +253,7 @@ sources:
                   local_actions_block: {  }
               - source_id: main_page_content
                 source: {  }
-  # Footer.
+  # Footer, in the footer landmark of the page.
   - source_id: component
     source:
       component:
@@ -269,6 +271,10 @@ sources:
             source_id: select
             source:
               value: default
+          landmark:
+            source_id: select
+            source:
+              value: footer
         slots:
           content:
             sources:

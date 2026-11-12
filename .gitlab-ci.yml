@@ -103,6 +103,9 @@ recipe:
     - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/support"))->getContent(), "<h1");')" -eq 1
     # The look: the Clear ink colors of UI Skins, with a dark mode value.
     - test "$($DRUSH config:get ui_suite_uikit.settings third_party_settings.ui_skins.css_variables.ui-suite-uikit-global-primary-background --format=json | grep -c 2448c4)" -eq 1
+    # The theme underlines the links of the main and footer elements: a page prints both.
+    - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/support"))->getContent(), "<main");')" -eq 1
+    - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/support"))->getContent(), "<footer");')" -eq 1
 
 # Drupal 12: let Composer install the contributed modules that do not declare
 # ^12 yet.

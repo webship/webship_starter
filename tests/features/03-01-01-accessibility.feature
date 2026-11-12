@@ -47,3 +47,8 @@ Feature: Accessibility of the pages
       And I press the key "Tab"
      Then the focused element should match "a, button, input, [tabindex]"
       And the page should have a skip link
+
+  Scenario: The links in the text of the Support page are not told apart by color alone
+    Given I am an anonymous user
+     When I go to "/support"
+     Then the page should not violate the accessibility rule "link-in-text-block"

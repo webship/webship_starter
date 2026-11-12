@@ -14,7 +14,7 @@
     "keywords": ["Drupal", "recipe", "Display Builder", "UI Suite", "UIkit", "starter", "Webship"],
     "require": {
         "drupal/core": "^11.4 || ^12",
-        "drupal/ui_suite_uikit": "^1.0",
+        "drupal/ui_suite_uikit": "^1.0.5",
         "drupal/webadmin": "~12.0.3",
         "drupal/webai": "~12.0",
         "drupal/webassets": "~12.0",
