@@ -87,6 +87,8 @@ recipe:
     - test "$($DRUSH config:get webform.webform.newsletter_subscribe id --format=string)" = "newsletter_subscribe"
     - $DRUSH pm:list --status=enabled --format=list | grep -qx webshare
     - $DRUSH pm:list --status=enabled --format=list | grep -qx webdashboard
+    # Content editors edit any content of the four content types, the example content included.
+    - test "$($DRUSH php:eval '$r = \Drupal\user\Entity\Role::load("content_editor"); print count(array_filter(array_map(fn ($t) => $r->hasPermission("edit any $t content"), ["product", "release", "webdoc", "webpage"])));')" -eq 4
     # The default content is imported: the Home, Make it yours and Support
     # pages, the Documentation page and its three guides, the Marigold example
     # product with two releases, and the images.

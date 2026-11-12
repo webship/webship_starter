@@ -140,7 +140,8 @@ config:
         - 'access content'
         - 'delete own files'
     # Content editors manage the content of every content type of the site,
-    # and move content through the editorial workflow.
+    # the example content included, which user 1 owns, and move content
+    # through the editorial workflow.
     user.role.content_editor:
       grantPermissions:
         - 'access content overview'
@@ -164,6 +165,7 @@ config:
         - 'create %bundle content'
         - 'delete %bundle revisions'
         - 'delete own %bundle content'
+        - 'edit any %bundle content'
         - 'edit own %bundle content'
     # Tokens in the content, like the year in the footer copyright block
     # ([date:custom:Y]).
