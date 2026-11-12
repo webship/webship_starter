@@ -30,6 +30,17 @@ Feature: Accessibility of the pages
       | /products        | the products page            |
       | /form/contact    | the contact form             |
 
+  Scenario: The Support page has one h1
+    Given I am an anonymous user
+     When I go to "/support"
+     Then the page should have exactly one h1
+
+  Scenario: The page not found page has one h1
+    Given I am an anonymous user
+     When I go to "/page-that-does-not-exist"
+     Then the response status code should be 404
+      And the page should have exactly one h1
+
   Scenario: The keyboard reaches the content of the front page
     Given I am an anonymous user
      When I go to "/"

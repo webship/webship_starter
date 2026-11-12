@@ -89,6 +89,10 @@ foreach (\Drupal::entityTypeManager()->getStorage("page_layout")->loadMultiple()
 }'
 ```
 
+The default layout puts the page title in the *Heading* component, level 1. Display Builder prints the title text
+only since 1.0.0-beta10, so a title placed straight in a slot leaves the page without an h1. The template
+conflicts with the Display Builder releases before that one, which print an h1 of their own.
+
 ## Image credits
 
 The photos in `content/file` are released under CC0 (public domain dedication), and were resized for the web:

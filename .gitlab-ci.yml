@@ -99,6 +99,8 @@ recipe:
     - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/support");')" != "/support"
     - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/docs/your-first-board");')" != "/docs/your-first-board"
     - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/products/marigold/releases/1.1.0");')" != "/products/marigold/releases/1.1.0"
+    # A page prints one h1: the page layout puts the page title in a heading.
+    - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/support"))->getContent(), "<h1");')" -eq 1
     # The look: the Clear ink colors of UI Skins, with a dark mode value.
     - test "$($DRUSH config:get ui_suite_uikit.settings third_party_settings.ui_skins.css_variables.ui-suite-uikit-global-primary-background --format=json | grep -c 2448c4)" -eq 1
 

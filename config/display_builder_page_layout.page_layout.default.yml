@@ -222,8 +222,23 @@ sources:
                 source:
                   plugin_id: system_breadcrumb_block
                   system_breadcrumb_block: {  }
-              - source_id: page_title
-                source: {  }
+              # The page title is the h1 of the page. Display Builder prints
+              # the title text only, so the Heading component gives it level 1.
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:heading'
+                    variant_id: null
+                    props:
+                      heading_level:
+                        source_id: select
+                        source:
+                          value: 1
+                    slots:
+                      title:
+                        sources:
+                          - source_id: page_title
+                            source: {  }
               - source_id: block
                 source:
                   plugin_id: local_tasks_block
