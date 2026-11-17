@@ -1,9 +1,9 @@
-Feature: Admin login.
-      As a anonymous user
-      I want to be able to as an admin user
-      So that that I will be able to administer the site
+Feature: Webmaster login
+  As the Webmaster of the site
+  I want to log in
+  So that I can administer the site
 
-  Scenario: Check if an anonymous user can login as admin
-    Given I am an anonymous user
-     When I login with the "Admin" user
-     Then I should see "Admin"
+  Scenario: The Webmaster logs in and reaches the administration
+    Given I am a logged in user with the "Webmaster" user
+     Then I should be logged in
+      And I should be allowed access to "/admin/content"

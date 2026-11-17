@@ -1,9 +1,13 @@
-Feature: Check the privacy page
-      As an anonymous user
-      I want to be able to visit the privacy page
-      So that I will able to know the privacy policy.
+Feature: No privacy page in the site template
+      As a site owner
+      I want to write the privacy policy of my own site
+      So that the site template ships no privacy page.
 
-  Scenario: Check privacy page
+  The template installs a front page, the Make it yours and Support pages,
+  the documentation, the products and the contact form; a site adds its own
+  privacy policy.
+
+  Scenario: The site template has no privacy page
     Given I am an anonymous user
      When I go to "/privacy"
-     Then I should see "Privacy"
+     Then the response status code should be 404

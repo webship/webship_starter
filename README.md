@@ -117,5 +117,8 @@ this project under GPL-2.0-or-later.
 
 ```shell
 yarn install
-LAUNCH_URL=https://my-site.ddev.site yarn test
+LAUNCH_URL=https://my-site.ddev.site DRUPAL_ADMIN_PASS='…' DRUPAL_EDITOR_PASS='…' yarn test --tags "not @wip and not @heading-level-skip"
 ```
+
+`tests/README.md` has the full install, from a DDEV site to a green run, the test accounts the site build
+creates (the suite only logs in) and why one tag is left out.

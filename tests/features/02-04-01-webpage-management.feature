@@ -1,9 +1,9 @@
 Feature: Webpage management
-      As a admin user
+      As the Webmaster
       I want to be able to add general Web Pages
-      So that I can map the site map for the main site .sections
+      So that I can map the site map for the main site sections
 
-  Scenario: Check if the admin user can add web pages.
-    Given I am a logged in user with the "Admin" user
+  Scenario: The Webmaster opens the form to add a web page
+    Given I am a logged in user with the "Webmaster" user
      When I go to "/node/add/webpage"
      Then I should see "Create Webpage"
