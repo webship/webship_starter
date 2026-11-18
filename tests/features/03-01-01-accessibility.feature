@@ -38,6 +38,7 @@ Feature: Accessibility of the pages
       | path             | name                         |
       | /                | the front page               |
       | /docs            | the documentation            |
+      | /support         | the Support page             |
 
     # Left out of the run (--tags "not @heading-level-skip"): the product
     # teasers of Web Releases (h3) and the contact webform of Web Page ("We'd

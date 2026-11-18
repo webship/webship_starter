@@ -42,7 +42,7 @@ default:
           <div>
             <div class="uk-card uk-card-default uk-card-body">
               <span class="uk-text-primary" uk-icon="icon: file-text; ratio: 2"></span>
-              <h3 class="uk-card-title">Read the docs</h3>
+              <h2 class="uk-card-title">Read the docs</h2>
               <p>Install Marigold, set up your first board and learn the basics.</p>
               <a class="uk-button uk-button-text" href="/docs">Documentation</a>
             </div>
@@ -50,7 +50,7 @@ default:
           <div>
             <div class="uk-card uk-card-default uk-card-body">
               <span class="uk-text-primary" uk-icon="icon: question; ratio: 2"></span>
-              <h3 class="uk-card-title">Ask a question</h3>
+              <h2 class="uk-card-title">Ask a question</h2>
               <p>Check the questions people ask most, then write to us if yours is not there.</p>
               <a class="uk-button uk-button-text" href="/docs/questions-and-answers">Questions and answers</a>
             </div>
@@ -58,7 +58,7 @@ default:
           <div>
             <div class="uk-card uk-card-default uk-card-body">
               <span class="uk-text-primary" uk-icon="icon: comments; ratio: 2"></span>
-              <h3 class="uk-card-title">Report a problem</h3>
+              <h2 class="uk-card-title">Report a problem</h2>
               <p>Something broken? Tell us what you did, what you saw and the version you use.</p>
               <a class="uk-button uk-button-text" href="/contact">Contact us</a>
             </div>
